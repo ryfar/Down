@@ -16,7 +16,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/swiftlang/swift-cmark.git", branch: "gfm")
+        .package(url: "https://github.com/ryfar/swift-cmark.git", branch: "gfm")
     ],
     targets: [
 //        .target(
