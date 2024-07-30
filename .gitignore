@@ -19,3 +19,9 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
+
+Down.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+
+Package.resolved
+
+*.resolved

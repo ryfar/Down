@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -785,6 +785,8 @@
 			dependencies = (
 			);
 			name = Down;
+			packageProductDependencies = (
+			);
 			productName = Down;
 			productReference = 8A569F401E6B3E50008BE2AC /* Down.framework */;
 			productType = "com.apple.product-type.framework";
@@ -1060,9 +1062,12 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Supporting Files/Down-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Sources/cmark";
+				TVOS_DEPLOYMENT_TARGET = 18.0;
 				"VALID_ARCHS[sdk=iphonesimulator*]" = "i386 x86_64 arm64";
 			};
 			name = Debug;
@@ -1082,9 +1087,12 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Supporting Files/Down-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Sources/cmark";
+				TVOS_DEPLOYMENT_TARGET = 18.0;
 				"VALID_ARCHS[sdk=iphonesimulator*]" = "i386 x86_64 arm64";
 			};
 			name = Release;

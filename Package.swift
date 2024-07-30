@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.5
 
 import PackageDescription
 
@@ -15,22 +15,29 @@ let package = Package(
             targets: ["Down"]
         )
     ],
+    dependencies: [
+        .package(url: "https://github.com/swiftlang/swift-cmark.git", branch: "gfm")
+    ],
     targets: [
-        .target(
-            name: "libcmark",
-            dependencies: [],
-            path: "Sources/cmark",
-            exclude: [
-              "include",
-              "case_fold_switch.inc",
-              "entities.inc",
-              "COPYING"
-            ],
-            publicHeadersPath: "./"
-        ),
+//        .target(
+//            name: "libcmark",
+//            dependencies: [],
+//            path: "Sources/cmark",
+//            exclude: [
+//              "include",
+//              "case_fold_switch.inc",
+//              "entities.inc",
+//              "COPYING"
+//            ],
+//            publicHeadersPath: "./"
+//        ),
         .target(
             name: "Down",
-            dependencies: ["libcmark"],
+//            dependencies: ["libcmark"],
+            dependencies: [
+                .product(name: "cmark-gfm", package: "swift-cmark"),
+                .product(name: "cmark-gfm-extensions", package: "swift-cmark"),
+            ],
             path: "Sources/Down",
             exclude: ["Down.h"],
           resources: [
